@@ -9,7 +9,7 @@ using Harmony;
 using Il2CppSystem.Collections.Generic;
 using MelonLoader;
 using System.IO;
-[assembly: MelonInfo(typeof(BTD6_Cave_Monkey_In_Shop.Class1), "Cave Monkey In Shop", "1.0.0", "kenx00x")]
+[assembly: MelonInfo(typeof(BTD6_Cave_Monkey_In_Shop.Class1), "Cave Monkey In Shop", "1.0.1", "kenx00x")]
 [assembly: MelonGame("Ninja Kiwi", "BloonsTD6")]
 namespace BTD6_Cave_Monkey_In_Shop
 {
@@ -90,7 +90,7 @@ namespace BTD6_Cave_Monkey_In_Shop
             }
         }
         [HarmonyPatch(typeof(UpgradeScreen), "UpdateUi")]
-        public class AddShopDetails
+        public class UpgradeScreen_Patch
         {
             [HarmonyPrefix]
             public static bool Prefix(ref string towerId)
